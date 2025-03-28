@@ -10,7 +10,7 @@ class Customer:
 
 
     def addOrder(self, order, menu):
-        if order in menu:
+        if order in menu.menu:
             self.customerOrderList.append(order)
             print(f"{order} is added to your list")
         else:
@@ -33,7 +33,7 @@ menu = Menu()
 customer = Customer()
 while True:
     order = input("\nEnter your order: ").capitalize()
-    if order.lower == "done":
+    if order.lower() == "done":
         break
     customer.addOrder(order, menu)
 
