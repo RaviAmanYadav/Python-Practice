@@ -1,13 +1,10 @@
 from hotelMenu import Menu
 
 
-
-
 class Customer:
     def __init__(self):
         self.customerOrderList = []
         self.totalBill = 0
-
 
     def addOrder(self, order, menu):
         if order in menu.menu:
@@ -15,8 +12,7 @@ class Customer:
             print(f"{order} is added to your list")
         else:
             print(f"sorry, {order} is not available in the menu")
-    
-   
+
     def showCustomerOrders(self):
         print("Your Orders")
         for order in self.customerOrderList:
@@ -39,6 +35,3 @@ while True:
 
 customer.showCustomerOrders()
 customer.calculateBill(menu)
-        
-
-
