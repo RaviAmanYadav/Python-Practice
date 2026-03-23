@@ -1,6 +1,7 @@
 def write():
-    with open ("demo2.txt","a") as f:
-        f.write("I love SRK \n")
+    with open("demo2.txt", "a") as f:
+        text = input("Enter what you want to write => ")
+        f.write(text + "\n")
 
 
 def show():
@@ -8,14 +9,18 @@ def show():
     print(f.read())
     f.close()
 
+
 while True:
     print("1. Write.")
     print("2. Display")
+    print("3. Exit")
     choice = int(input("Enter the choice => "))
     match choice:
         case 1:
             write()
         case 2:
             show()
+        case 3:
+            exit()
         case _:
             print("Invalid operation.")
