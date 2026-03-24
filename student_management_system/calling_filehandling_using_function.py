@@ -5,10 +5,11 @@ def write():
 
 
 def show():
-    f = open("demo2.txt")
-    print(f.read())
-    f.close()
-
+    with open("demo2.txt","r") as f:
+        # print(f.readlines(20))
+        lines = f.readlines()
+        for i, line in enumerate(lines, 1):
+            print(i, "=>", repr(line))
 
 while True:
     print("1. Write.")
